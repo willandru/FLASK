@@ -7,10 +7,13 @@ app = Flask(__name__)
 
 def index():
 
+	cursos=['PHP', 'MySQL', "Python", "Kotlin"]
+
 	data={
 		'titulo': 'Index',
-		'bienvenido' : 'Saludos!' 
-
+		'bienvenida' : 'Saludos!',
+		'cursos': cursos, 
+		'numero_cursos': len(cursos) 
 	}
 
 	return render_template('index.html', data=data)
